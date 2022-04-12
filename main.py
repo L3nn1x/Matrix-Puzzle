@@ -148,7 +148,8 @@ class MatrixPinLock:
                         continue
 
                 if analyze[0] == 'show':
-                    print(back.RED, '\n', numpy.vstack(matrixPinLock), '\n', back.RESET)
+                    self.clear()
+                    print(fore.RED, '\n', numpy.vstack(matrixPinLock), '\n', fore.RESET)
                     continue
 
                 if analyze[0] == 'encode' and analyze[1].isdigit():
@@ -215,10 +216,10 @@ class MatrixPinLock:
                             shiftV = self.vShift(matrixPinLock, shift, position-1)
                             matrixPinLock[:] = shiftV
                             if matrixPinLock == original:
-                                print(back.GREEN, '\n', numpy.vstack(matrixPinLock), '\n', back.RESET)
+                                print(fore.GREEN, '\n', numpy.vstack(matrixPinLock), '\n', fore.RESET)
                                 solved = True
                             self.clear()
-                            print(back.RED, '\n', numpy.vstack(matrixPinLock), '\n', back.RESET)
+                            print(fore.RED, '\n', numpy.vstack(matrixPinLock), '\n', fore.RESET)
 
 
 
@@ -229,14 +230,15 @@ class MatrixPinLock:
                             shiftH = self.hShift(matrixPinLock, shift, position-1)
                             matrixPinLock[:] = shiftH
                             if matrixPinLock == original:
-                                print(back.GREEN, '\n', numpy.vstack(matrixPinLock), '\n', back.RESET)
+                                print(fore.GREEN, '\n', numpy.vstack(matrixPinLock), '\n', fore.RESET)
                                 solved = True
                             self.clear()
-                            print(back.RED, '\n', numpy.vstack(matrixPinLock), '\n', back.RESET)
+                            print(fore.RED, '\n', numpy.vstack(matrixPinLock), '\n', fore.RESET)
 
                 self.log.append(user)
             except Exception as e:
                 self.log.append([user, f'-{e}'])
+                self.clear()
                 print(back.YELLOW, f'\n\n\t{e}\n\n', back.RESET)
                 continue
 
