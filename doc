@@ -1,0 +1,27 @@
+to shift the columns, type: "v c" and then specify the column and the shift: 2 6
+( "v c 2 6" )
+
+Note:
+    There's only 9 rows and 9 columns, a  9x9 matrix.
+    if u put 10 in the positions it will cause an error.
+
+    you can shift in negative -1 -2 -3 . . .
+
+
+remember:
+    "mode(v or h) | location(c or r) | position | shift.
+
+
+to shift the rows, type "h r" and then specify the row and the shift: 2 6
+( "h r 2 6" )
+
+commands: 'v', 'h', 'r', 'c', 'log', 'save', 'q', 'done', 'load', 'doc'
+
+hidden commands: 'show' ['add', 'text', *filePath.txt*] ['encode', *shift*]
+
+save: save *file.json*
+load: load *file.json*
+doc: this document
+q: quit()
+log: commands history
+done: check if is solved
