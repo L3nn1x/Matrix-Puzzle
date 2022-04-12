@@ -273,7 +273,7 @@ pinlock = mpl.pinLock()
 print(back.GREEN, numpy.vstack(pinlock), '\n', back.RESET)
 print(back.RED, numpy.vstack(mpl.random), '\n', back.RESET)
 
-mPuzzle = mpl.manipulate(pinlock=mpl.sorted_PinLock)
+mPuzzle = mpl.manipulate(pinlock=mpl.random)
 for i in range(len(mPuzzle)):
     mPuzzle[i] = [int(x) for x in mPuzzle[i]]
 
