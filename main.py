@@ -271,7 +271,9 @@ class MatrixPinLock:
 
 mpl = MatrixPinLock()
 pinlock = mpl.pinLock()
-
+while True:
+    print()
+    break
 print(back.GREEN, numpy.vstack(pinlock), '\n', back.RESET)
 print(back.RED, numpy.vstack(mpl.random), '\n', back.RESET)
 
